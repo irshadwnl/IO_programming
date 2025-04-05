@@ -1,13 +1,15 @@
 package createJsonObject;
 
-public class User {
+import java.util.List;
+
+public class Student {
     private String name;
-    private String id;
+    private List<String> subjects;
     private int age;
 
-    public User(String name, String id, int age) {
+    public Student(String name, List<String> subjects, int age) {
         this.name = name;
-        this.id = id;
+        this.subjects = subjects;
         this.age = age;
     }
 
@@ -15,11 +17,13 @@ public class User {
         return age;
     }
 
-    public String getId() {
-        return id;
+    public List<String> getSubjects() {
+        return subjects;
     }
 
     public String getName() {
         return name;
     }
+
+
 }

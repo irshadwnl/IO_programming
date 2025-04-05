@@ -10,9 +10,9 @@ public class Main {
     public static void main(String[] args) {
         try{
             ObjectMapper objectMapper=new ObjectMapper();
+            File file=new File("C:\\Users\\Irshad\\IdeaProjects\\jsonAssignment\\src\\main\\java\\readJsonFile\\user.json");
             List<User> users = objectMapper.readValue(
-                    new File("C:\\Users\\Irshad\\IdeaProjects\\jsonAssignment\\src\\main\\java\\readJsonFile\\user.json"),
-                    new TypeReference<List<User>>() {}
+                    file,new TypeReference<List<User>>() {}
             );
             for (User user : users) {
                 System.out.println("Name:- "+user.getName() + ", Email:- "+user.getEmail());
